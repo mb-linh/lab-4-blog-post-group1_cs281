@@ -20,7 +20,16 @@ The buzzer consists of two input pins identified as + and -. Inside the buzzer, 
 ## Building Circuit
 To build this circuit we need to connect the photoresistor in series with a 1kΩ resistor and connect the other end of resistor to +5V. We also need to connect other end of photoresistor to GND. We also have to connect the photoresistor to the Arduino. We must connect the positive side of the photoresistor to analog input 0 of the Arduino.Next, we have to add the Buzzer. To connect the Buzzer, we must ensure that the + (positive) pin of the buzzer is in the higher row and the - (negative) pin is in the lower row.Connect the - (negative) pin of the buzzer to the ground (GND) on the breadboard. Connect the other end of the + wire alternately to pin 13 on the Arduino. Lastly make sure the Arduino is connected to GND. You should have three wires connected to the Aruduino.
 
+Now lets get into the Code
+
+```
+
+```
 ## Testing
+
+
+https://github.com/mlcourses/lab-4-blog-post-csmith2025/assets/112486168/7900f448-1c40-40d7-93df-06eb00df8435
+
 
 ## Conclusion
 
