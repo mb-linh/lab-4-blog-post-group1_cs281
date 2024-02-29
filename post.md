@@ -71,6 +71,9 @@ void loop() {
 }
 
 ```
+
+
+This Arduino Code is made to read the analog input from a photoresistor connected to pin A0 and emit different tones through a buzzer based on the detected brightness level. The ```setup``` function initializes VPIN as a input. The loop function first reads in the value from the photoresistor. Then based on that value,it maps the correspoding freq value for the buzzer. The lower the variable val is, the more light is coming into the photoresistor which means we want a higher freq value. After this we use the tone frequency to emit the chosen frequency.
 ## Testing
 
 
@@ -79,6 +82,6 @@ https://github.com/mlcourses/lab-4-blog-post-csmith2025/assets/112486168/7900f44
 
 ## Conclusion
 
-
+This Light Detector project successfully utilized a photoresistor and a buzzer with an Arduino to create a system where the emitted sound's pitch correlates with the brightness of the light. The project involved understanding the lab equipment, building a circuit connecting the photoresistor and buzzer to the Arduino, and implementing code for tone generation based on light levels. This project gives us real world application of sensor-actuator integration, showcasing the Arduino's capability to sense and respond to changes in the external environment.
 
 
