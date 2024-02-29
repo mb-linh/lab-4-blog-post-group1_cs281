@@ -2,7 +2,7 @@
 
 
 ## Overview and Motivation
-This week we'll explore the way an Arduino and an embedded computer can comunicate and interact with an external eviroment including a buzzer and photoresistor to create a Light Detector that emits a sound whose pitch correlates with the brightness of the light. 
+This week we'll explore the way an Arduino and an embedded computer can comunicate and interact with an external eviroment including a buzzer and photoresistor to create a Light Detector that emits a sound whose pitch correlates with the brightness of the light shined on the photoresistor.
 
 ## Materials
 1.PB-503
