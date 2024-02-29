@@ -39,6 +39,36 @@ To build this circuit we need to connect the photoresistor in series with a 1kΩ
 Now lets get into the Code
 
 ```
+#define V_PIN 0
+#define BUZZER 13
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(V_PIN, INPUT);
+}
+
+void loop() {
+  int val = analogRead(V_PIN);
+  Serial.println(val);
+  int freq;
+  if (val < 100) {
+    freq = 880;
+  } else if (val < 120) {
+    freq = 783;
+  } else if (val < 140) {
+    freq = 698;
+  } else if (val < 180) {
+    freq = 659;
+  } else if (val < 400) {
+    freq = 587;
+  } else if (val < 700) {
+    freq = 523;
+  } else {
+    freq = 493;
+  }
+  tone(BUZZER, freq);
+  delay(500);
+}
 
 ```
 ## Testing
