@@ -35,11 +35,9 @@ Photoresistors measures light brightness. It is a type of resistor that adjusts 
 
 ### 2.Building our light detector
 
-Now that we have had a basic grasps of what our components do, it's time to build the circuit! The first step is to wire our photoresistor. We will wire one end of the photoresistor to a 1kΩ resistor, which then goes to +5V. The other end of the photoresistor will go to ground. You will need to leave a gap between the 1kΩ resistor and our photoresistor, as that is where we will wire input to our Arduino (in other words, don't wire them in 2 adjacent pins). In this gap, we will plug a wire, which will go to the analog input A0 of our Arduino. The Arduino serves to translate the resistance value to a tone frequency for our buzzer, such that the more brightness we shine on the photoresistor, the higher pitched the buzzer sound is.
+Now that we have had a basic grasps of what our components do, it's time to build the circuit! The first step is to wire our photoresistor. We will wire one end of the photoresistor to a 1kΩ resistor, which then goes to +5V. The other end of the photoresistor will go to ground. You will need to leave a gap between the 1kΩ resistor and our photoresistor, as that is where we will wire the input to our Arduino (in other words, don't wire them into 2 adjacent pins). In this gap, we will plug a wire, which will go to the analog input A0 of our Arduino. The Arduino serves to translate the resistance value to a tone frequency for our buzzer, such that the more brightness we shine on the photoresistor, the higher pitched the buzzer sound is. Next, we will wire the buzzer. To connect the buzzer, we must ensure that the + (positive) pin of the buzzer is in the higher row and the - (negative) pin is in the lower row. Connect the - (negative) pin of the buzzer to the ground (GND) on the breadboard, then connect the other end of the + wire to pin 13 on the Arduino. Finally, make sure that your Arduino's GND is wired to the breadboard's ground.
 
-To build this circuit, we need to connect the photoresistor in series with a 1kΩ resistor and connect the other end of the resistor to +5V. We also need to connect other end of photoresistor to GND. We also have to connect the photoresistor to the Arduino. We must connect the positive side of the photoresistor to analog input 0 of the Arduino.Next, we have to add the Buzzer. To connect the Buzzer, we must ensure that the + (positive) pin of the buzzer is in the higher row and the - (negative) pin is in the lower row.Connect the - (negative) pin of the buzzer to the ground (GND) on the breadboard. Connect the other end of the + wire alternately to pin 13 on the Arduino. Lastly make sure the Arduino is connected to GND. You should have three wires connected to the Aruduino.
-
-Now lets get into the Code
+So how exactly does the Arduino convert brightness into tone frequency? With the code snippet below:
 
 ```
 #define V_PIN 0
@@ -75,7 +73,8 @@ void loop() {
 
 ```
 
-This Arduino Code is made to read the analog input from a photoresistor connected to pin A0 and emit different tones through a buzzer based on the detected brightness level. The ```setup``` function initializes VPIN as a input. The loop function first reads in the value from the photoresistor. Then based on that value,it maps the correspoding freq value for the buzzer. The lower the variable val is, the more light is coming into the photoresistor which means we want a higher freq value. After this we use the tone frequency to emit the chosen frequency.
+This code is actually simpler than the code from our previous labs. It reads the analog signal from the photoresistor, which is a number from 0 to 1023. Then, based on the value read, a specific frequency in Hz (```freq```) will be set. If the number looks odd to you, don't worry: They are frequencies of notes on a major scale, so that our buzzer sounds a bit nicer. After determining the tone frequency, the ```tone()``` functions makes the buzzer emit a sound at that frequency.
+
 ## Testing
 
 
@@ -84,6 +83,6 @@ https://github.com/mlcourses/lab-4-blog-post-csmith2025/assets/112486168/7900f44
 
 ## Conclusion
 
-This Light Detector project successfully utilized a photoresistor and a buzzer with an Arduino to create a system where the emitted sound's pitch correlates with the brightness of the light. The project involved understanding the lab equipment, building a circuit connecting the photoresistor and buzzer to the Arduino, and implementing code for tone generation based on light levels. This project gives us real world application of sensor-actuator integration, showcasing the Arduino's capability to sense and respond to changes in the external environment.
+This Light Detector project successfully utilized a photoresistor and a buzzer with an Arduino to create a system where the emitted sound's pitch correlates with the brightness of the light. The project involved understanding the new lab equipment (the photoresistor and buzzer), building a circuit connecting the photoresistor and buzzer to the Arduino, and implementing code for tone generation based on light levels. This project gives us real world application of sensor-actuator integration, showcasing the Arduino's capability to sense and respond to changes in the external environment.
 
 
