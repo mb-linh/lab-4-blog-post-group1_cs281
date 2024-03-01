@@ -83,6 +83,6 @@ https://github.com/mlcourses/lab-4-blog-post-csmith2025/assets/112486168/7900f44
 
 ## Conclusion
 
-This Light Detector project successfully utilized a photoresistor and a buzzer with an Arduino to create a system where the emitted sound's pitch correlates with the brightness of the light. The project involved understanding the new lab equipment (the photoresistor and buzzer), building a circuit connecting the photoresistor and buzzer to the Arduino, and implementing code for tone generation based on light levels. This project gives us real world application of sensor-actuator integration, showcasing the Arduino's capability to sense and respond to changes in the external environment.
+This Light Detector project successfully utilized a photoresistor and a buzzer with an Arduino to create a system where the emitted sound's pitch correlates with the brightness of the light. The project involved understanding the new lab equipment (the photoresistor and buzzer), building a circuit connecting the photoresistor and buzzer to the Arduino, and implementing code for tone generation based on light levels. We hope that you have learned something new today about sensors and actuators, and please give it a go if you can!
 
 
